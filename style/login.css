@@ -1,0 +1,143 @@
+body,ol,ul,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{margin:0;padding:0;}
+body{font-size: 12px;font-family:"微软雅黑";}
+body ::selection {color:#FFFFFF;background-color:#E66F4C;text-shadow:none;}
+body ::-moz-selection {color:#FFFFFF;background-color:#E66F4C;text-shadow:none;}
+html{height:100%}
+img{border:none;}
+li{list-style-type: none;}
+input,select,textarea{outline:none;border:none;background:none}
+input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset;}
+textarea{resize:none;}
+a{text-decoration: none;}
+/*清除浮动*/
+.clearfix:after{display: block;clear: both;content: '';height: 0;}
+.clearfix{zoom:1;}
+/*通用样式*/
+.fl{float:left}
+.fr{float:right}
+.comWidth{width:920px;margin:0 auto}
+.show{display: block}
+.hide{display: none}
+/*页面背景*/
+body{background-image: url(../img/body_bg_page.jpg);background-position: left 0px;background-repeat: no-repeat;background-color: #d4d5e0;}
+/*登录框主体*/
+.loginBox{width:100%;height:450px;background: url(../img/bg_nologin1.jpg);background-size: cover;position:relative}
+.logoBox{margin:0 auto; padding:20px 0}
+.logoBox a{display:block}
+.adBox{width:620px;height:300px;}
+.adBox img{width:620px;height:300px}
+.loginMain{position: relative}
+.loginForm{width:270px;height:272px;padding:20px 15px 8px 15px;}
+.loginShadow{background-color: #000;opacity: 0.4;filter:alpha(opacity=40);width:300px;height:300px;right: 0;position: absolute;z-index: 1;top:0}
+.loginCheck{width:270px;height:29px;border-bottom:1px solid #9EA4A4;z-index: 2;position:relative;margin-bottom: 20px;}
+.loginCheck span{color:#ccc; width:135px;text-align: center;float:left;font-size: 16px;height:30px;line-height: 30px;margin-bottom: 5px;cursor:pointer;position:relative}
+.loginCheck .active{height:30px;line-height: 30px;color:#fff}
+.bottom_block{background-color: #FA7D3C;width:135px;height:3px;position:absolute;bottom:-1px;left:0}
+.safe{background: url(../img/tuijian.png) left center no-repeat;text-indent: 8px;}
+.loginCheckBox{width:270px;z-index: 3;position: relative;}
+.safeBox span{width:180px;height:180px;display: block;margin: 0 auto;text-align: center;color:#fff;top: 5px;}
+.safeBox span p{height:30px;line-height: 30px;}
+.safeBox span a{font-size: 12px;color:#EB7350}
+.saoyisao{width:259px;height:368px;background: url(../img/saoyisao.png) left center no-repeat;position: absolute;top:-110px;left:-240px;}
+.userBox{width:100%;height:100%;}
+.userBox .userTxt,.userBox .passBox{width:232px;height: 38px;margin-bottom: 9px;border: 1px solid #fff;border-radius: 2px;background-color: #fff;line-height: 38px\9;padding-left: 36px;}
+.userTxt{background: url(../img/userBox.png)12px center no-repeat}
+.passBox{background:url(../img/passBox.png)12px center no-repeat}
+.userBox .userTxt:focus,.userBox .passBox:focus{border-color: #FA7D3C}
+.checkB{border:none;color: #fff;vertical-align: middle}
+.remText{color:#ccc;vertical-align: middle;margin-left:3px;display: inline-block}
+.forget a{color:#ccc}
+.forget a:hover{color:#fff}
+.loginBtn{width:100%;height:40px;background-color: #fa7d3c;text-align: center;cursor: pointer;border-radius: 2px;clear:both;top:8px;position:relative;line-height: 40px;color:#fff;font-size: 16px;}
+.loginBtn:hover{background-color: #F7671D}
+.error{position:absolute;background-color: #fff;border:1px solid #ccc;border-radius: 2px;text-align: center;box-shadow: 0 4px 20px 1px rgba(0,0,0,0.2);}
+.error p{line-height: 32px;color:#333}
+/*.errorbg{background:url(../img/)}*/
+.sanjiao{width:0;height:0;border-width: 5px;border-color: #fff transparent transparent transparent;border-style: solid;margin:-2px auto}
+.errorUser{top:-35px;left:60px;width:148px;height:30px;}
+.errorPass{width:136px;height:30px;top:14px;left:65px}
+.regLink{border-bottom:1px solid rgba(183, 185, 184,0.5);color:#ccc;position:relative;margin-top:10px;line-height: 30px;}
+.regLink a{color:#EB7350}
+.ohterLogin{color:#ccc;line-height: 30px;}
+.ohterLogin span{margin-right: 30px;}
+.ohterLogin a{color:#eb7350;display: inline-block;margin-right:7px;width:15px;height:14px;background-image: url(../img/login_list.png);background-repeat: no-repeat;line-height: 30px;vertical-align: middle;}
+.more{display: inline-block}
+.qq{background-position: left center}
+.net{background-position: -48px center}
+.qihu{background-position: -98px center}
+.unk{background-position: -148px center}
+.baidu{background-position: -197px center}
+.jiantou{background-position: -18px center}
+.appDown{text-align: center;top: 15px;position:relative}
+.appDown a{color:#c5c5c5;width:65px;display: inline-block;text-align: left;padding-left: 30px;margin-right: 26px;font-size: 12px;}
+.appDown a:hover{color:#fff}
+.iphoneApp{background: url(../img/iphone.png) left center no-repeat}
+.androidApp{background: url(../img/android.png) left center no-repeat}
+.genApp{background: url(../img/gen_sm.png) left center no-repeat}
+
+
+/*主体部分*/
+.main{margin-top:15px;}
+.leftArea{width:600px;}
+.rightArea{width: 300px;}
+/*微博内容部分*/
+.loadWeibo{position:relative;background-color: #ffdda2;border-radius: 3px;box-shadow: 0 0 1px 0 #ccc;width:600px;margin-top: 10px;height:32px;text-align: center}
+.loadWeibo a{font-size: 14px;height:32px;line-height: 32px;color:#eb7350;display: block;}
+.loadWeibo a:hover{color:#FF0000}
+.loadWeibo .loadImg{background: url(../img/loading.png) center 9px no-repeat;width:20px;float:left;margin-left:240px;height:20px;display: inline-block;z-index: 20;}
+.weiboBox{position:relative;background-color: #fff;border-radius:3px; box-shadow: 0 0 1px 0  #ccc;width:600px;margin-bottom:10px;}
+.userInfoBox{width:560px;padding:20px 20px 4px;border-bottom:1px solid #F2F2F5;position:relative}
+.userInfo_box{width:378px;height:224px;background-color: #fff;position:absolute;left:10px;top:80px;z-index: 2;border-radius:2px;box-shadow: 0 0 2px 1px #ccc;float:left}
+.userInfo_box .arrow{left: 10px;}
+.userInfo_sm{height:54px;width:100%;}
+.weiboText{width:500px;padding-left: 60px;margin-top: -5px}
+.weiboText p{line-height: 23px;display: block;width:500px;word-wrap: break-word;}
+.userInfo_big_img{height:124px;width:100%;background:url(../img/userbg.jpg)left center no-repeat;background-size: 100%;position:absolute;}
+.userInfo_big_tit{width:234px;height:102px;position:relative;margin:14px auto;text-align: center;color:#fff}
+.userInfo_big_tit img{width:50px;height:50px;border-radius: 50%}
+.userInfo_big_tit .userName{color:#fff;font-weight: bold;line-height: 24px;}
+.userInfo_big_tit .otherName{color:#fff;line-height: 24px}
+.userInfo_tool{color:#000000;position: relative; top: 124px;text-align: center;font-weight: bold;}
+.Info{margin-top:5px;height:40px;}
+.userInfo_tool .info_num{line-height: 18px;display: inline-block;margin-top:10px;padding:0 9px 0 5px;border-right: 1px solid #e5e5e5;}
+.userInfo_tool  .info_num a{color:#000}
+.info_num:last-child{border-right:none}
+.userInfo_tool  a:hover{color:#fa7d3c}
+.userInfo_tool .info_num i{font-style: normal}
+.userInfo_tool .address{color:#252525;font-weight: normal;height:24px;line-height: 24px;}
+.userInfo_tool span{margin-right:10px;margin-top:5px;font-size: 12px;position:relative;display: inline-block;line-height: 26px;background-color: #ff004f;border:1px solid #cdcdcd;border-radius: 2px;background-color: #fff;cursor:pointer}
+.foll_info,.pm{padding:0 32px}
+.menu_tool{padding:0 7px;}
+.userTit{position:relative;padding-left:10px;}
+.userTit a{color:#333;font-size:14px;}
+.time em{font-style: normal}
+.time{font-size:12px;color:#808080;padding-left:10px;margin-top:5px;height: 20px;}
+.time a{font-size:12px;color:#808080}
+.userText{font-size:12px;color:#333;margin-top:5px;padding-left: 10px;line-height: 23px;}
+.transport{width:510px;height:356px;background-color: #F2F2F5;padding:5px 20px 0 70px}
+.imgBox{padding-left:10px;display: inline-block;width:500px;margin-top: 7px;}
+.imgBox img{width:248px;cursor:}
+.friendNum{margin-top: 5px;}
+.friendNum a{margin:0 10px 0 10px;line-height: 13px;}
+.iconNum{display: inline-block;text-indent: 19px;font-style: normal;color:#808080;}
+.transportNum{background:url(../img/transportNum.jpg) left center no-repeat;}
+.talkNum{background: url(../img/talkNum.jpg) left center no-repeat}
+.goodNum{background:url(../img/goodNum.jpg) left center no-repeat}
+.weiboTool{background-color:#fff;height:38px;}
+.weiboTool li{float:left;width:149px;text-align: center;height:22px;border-right: 1px solid #ccc;margin:8px 0}
+.weiboTool li:last-child{border-right:none;}
+.weiboTool li a{line-height: 20px;color:#808080;}
+.weiboTool li a:hover{color:#fa7d3c}
+.collect{background: url(../img/collect.jpg) left center no-repeat}
+.loading{width:600px;background-color: #fff;border-radius: 3px;height:36px;margin-top: 10px;text-align: center;line-height: 36px;box-shadow: 0 0 1px #ccc}
+/*右侧*/
+.hotTalk{width:300px;height:320px;background-color: #fff;box-shadow: 0 0 1px 0 #ccc;border-radius: 3px}
+.talkTit{border-bottom:1px solid #f2f2f5;height:24px;line-height: 39px;height:39px;padding:0 15px}
+.talkTit a{color:#000;font-weight: bold;}
+.talkTit a:hover{color:#fa7d3c}
+.refuse a{font-weight: normal}
+.talkList{margin-top:14px;padding:0 15px}
+.talkList li{height:28px;line-height: 28px}
+.talkList li em{font-style: normal;float:right;color:#808080}
+.talkList li a{color:#000}
+.talkList li a:hover{color:#fa7d3c}

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>新浪微博</title>
+    <link rel="stylesheet" href="style/common.css" media="screen" title="no title" charset="utf-8">
+    <script src="script/jquery-1.12.3.min.js" charset="utf-8"></script>
+    <script src="script/main.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <!-- 新浪微博 -->
+    <div class="headerBox">
+        <div class="header clearfix">
+            <div class="logo fl">
+                <a href="#"><img src="img/logo.jpg" alt="" /></a>
+            </div>
+            <div class="searchBox fl">
+                <input type="text" class="search" value="" placeholder="大家正在搜:孙菲菲">
+                <a href="#" class="searchImg"><img src="img/search.png" alt="" /></a>
+                <div class="search_List">
+                    <p class="search_more">
+                        <a href="www.baidu.com">查看完整搜索榜》</a>
+                    </p>
+                    <ul>
+                        <li><a href="#"><em>1</em>美不美看大腿</a></li>
+                        <li><a href="#"><em>2</em>直男帮我挑衣服</a></li>
+                        <li><a href="#"><em>3</em>多半在娘胎里就已决定了</a></li>
+                        <li><a href="#"><em>4</em>佟丽娅</a></li>
+                        <li><a href="#"><em>5</em>夏洛特公主</a></li>
+                        <li><a href="#"><em>6</em>周扬清</a></li>
+                        <li><a href="#"><em>7</em>心酸 下井前后夫妻照</a></li>
+                        <li><a href="#"><em>8</em>欢乐颂结局</a></li>
+                        <li><a href="#"><em>9</em>宿管阿姨一出手</a></li>
+                        <li><a href="#"><em>10</em>如何选择适合自己的发型</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navBox fl">
+                <ul>
+                    <li class="home "><a href="#" class="active">首页</a></li>
+                    <li class="find"><a href="#">发现</a></li>
+                    <li class="game"><a href="#">游戏</a></li>
+                    <li class=user><a href="#">Sakura</a></li>
+                </ul>
+            </div>
+            <div class="settings fl clearfix">
+                <div class="set fl">
+                    <a href="#"><img src="img/mess_icon.png" alt="" /></a>
+                </div>
+                <div class="set fl">
+                    <a href="#"><img src="img/set_icon.jpg" alt="" /></a>
+                </div>
+                <div class="set fl">
+                    <a href="#"><img src="img/send_weibo.jpg" alt="" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main clearfix">
+        <div class="mainLeft fl">
+            <div class="leftNav">
+                <div class="leftNav_t">
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">消息</a></li>
+                        <li><a href="#">收藏</a></li>
+                        <li><a href="#">赞</a></li>
+                    </ul>
+                </div>
+                <div class="leftNav_line">
+                    <fieldset>
+                        <legend>
+                            <a href="#"><img src="img/guanli.png" alt="" /></a>
+                        </legend>
+                    </fieldset>
+                </div>
+                <div class="leftNav_b">
+                    <ul>
+                        <li><a href="#">好友圈</a></li>
+                        <li><a href="#">特别关注</a></li>
+                        <li><a href="#">手机</a></li>
+                        <li><a href="#">手机数码</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mainRight fl clearfix">
+            <div class="mainRight_l fl">
+                <!-- 发表框 -->
+                <div class="publish">
+                    <div class="pub_title clearfix">
+                        <div class="tit fl"><img src="" alt="" /></div>
+                        <div class="keys fr">
+                            <a href="#">百度医疗推广被曝日进数千万,莆田系与某医院合同曝光</a>
+                            <a class="tit_hot" href="#">热门</a>
+                        </div>
+                        <div class="textNum">
+                            <p>还可以输入<em class="num">140</em>字</p>
+                        </div>
+                        <div class="textErrorNum">
+                            <p>已超出 <em class="errorNum">50</em>字</p>
+                        </div>
+                    </div>
+                    <div class="pub_text">
+                        <textarea class="w_input" rows="4" cols="40"></textarea>
+                    </div>
+                    <div class="pub_tool clearfix">
+                        <div class="tool fl">
+                            <ul>
+                                <li><a href="#" class="biaoqing">表情</a>
+                                    <div class="face_list">
+                                        <span class="arrow">
+                                            <i class="jiantou_b"></i>
+                                            <em class="jiantou_t"></em>
+                                        </span>
+                                        <span class="face_close">×</span>
+                                        <div class="face_minitab">
+                                            <ul class="faceImg_list">
+                                                <li class="active">默认</li>
+                                                <li>浪小花</li>
+                                                <li>哆啦A梦</li>
+                                                <li>暴走漫画</li>
+                                                <li>小恐龙</li>
+                                            </ul>
+                                            <ul class="faceImg_q">
+                                                <li>◀</li>
+                                                <li>▶</li>
+                                            </ul>
+                                        </div>
+                                        <div class="faceImg">
+                                            <ul class="biaoqingbao">
+                                                <li>
+                                                    <a href="#"><img src="img/shamea_org.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/shamea_org.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/shamea_org.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                            </ul>
+                                            <ul class="biaoqingbao">
+                                                <li>
+                                                    <a href="#"><img src="img/shamea_org.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/shamea_org.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/shamea_org.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                            </ul>
+                                            <ul class="biaoqingbao">
+                                                <li>
+                                                    <a href="#"><img src="img/shamea_org.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/shamea_org.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/shamea_org.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                            </ul>
+                                            <ul class="biaoqingbao">
+                                                <li>
+                                                    <a href="#"><img src="img/shamea_org.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/shamea_org.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/shamea_org.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                            </ul>
+                                            <ul class="biaoqingbao">
+                                                <li>
+                                                    <a href="#"><img src="img/shamea_org.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/shamea_org.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/shamea_org.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                            </ul>
+                                            <ul class="biaoqingbao">
+                                                <li>
+                                                    <a href="#"><img src="img/shamea_org.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/shamea_org.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/shamea_org.gif" alt="" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img src="img/mm_thumb.gif" alt="" /></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="#" class="img">图片</a>
+
+                                </li>
+                                <li><a href="#" class="video">视频</a></li>
+                                <li><a href="#" class="talk">话题</a></li>
+                                <li><a href="#" class="tit_text">头条文章</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="public fr clear">
+                            <p class="fl">
+                                <a href="#">公开∨</a>
+                            </p>
+                            <div class="send fr"><a href="#">发布</a></div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 中间导航 -->
+                <div class="centerNav clearfix">
+                    <div class="nav_list fl">
+                        <div class="jiantou"></div>
+                        <div class="centerNav_list">
+                            <ul>
+                                <li><a href="#" class="active">全部</a></li>
+                                <li><a href="#">原创</a></li>
+                                <li><a href="#">图片</a></li>
+                                <li><a href="#">视频</a></li>
+                                <li><a href="#">音乐</a></li>
+                                <li><a href="#">文章</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav_search fr clearfix">
+                        <input class="search_sm " type="text" name="name" value="" placeholder="搜索我关注人的微博">
+                        <span class="pub_list "><a href="#">▼</a></span>
+                    </div>
+                </div>
+                <!-- 微博内容 -->
+                <div class="weiboList">
+                    <div class="loadWeibo">
+                        <p>
+                            <a href="#" class="loadBtn">有新微博，点击加载</a>
+                        </p>
+                    </div>
+                    <div class="weiboBox">
+                        <div class="userInfoBox clearfix">
+                            <div class="userInfo_sm">
+                                <div class="userImg fl" title="Sakura">
+                                    <a href="#"><img src="img/userImg2.jpg" alt="" /></a>
+                                </div>
+                                <div class="Info fl" title="Sakura">
+                                    <h3 class="userTit"><a href="#">Sakura <img src="img/vipIcon2.png" alt="" /></a> <img src="img/lv_big.png" alt="" /></h3>
+                                    <p class="time"><em>30秒</em>前 <em>来自</em> <em><a href="#">微博weibo.com</a></em></p>
+                                </div>
+                            </div>
+                            <div class="weiboText">
+                                <p>
+                                    微博内容示例
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="weiboTool">
+                            <ul>
+                                <li><a href="#" class="collect iconNum">收藏</a></li>
+                                <li><a href="#" class="transportNum iconNum">转发</a></li>
+                                <li><a href="#" class="talkNum iconNum">评论</a></li>
+                                <li><a href="#" class="goodNum iconNum">赞</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="loading">
+                    <div class="loadingText">
+                        <p>正在加载中，请稍侯...</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧 -->
+            <div class="mainRight_r fl">
+                <!-- 用户信息 -->
+                <div class="userBox">
+                    <div class="userbg"></div>
+                    <div class="userImgBox">
+                        <a href="#"><img src="img/userImg.jpg" alt="Sakura" title="sakura" /></a>
+                    </div>
+                    <div class="userInfo">
+                        <h3 class="userid"><a href="#">Misaka</a> <img src="img/vipIcon.jpg" alt="" /></h3><em class="lv">LV.9</em>
+                        <div class="userInfo_list">
+                            <span class="fl userConern"><p><a href="#" class="num">159</a></p><p class="conern">关注</p></span>
+                            <span class="fl  line userFans"><p><a href="#" class="num">595</a></p><p class="fans">粉丝</p></span>
+                            <span class="fl userWeibo"><p><a href="#" class="num">447</a></p><p class="weibo">微博</p></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 电影热映榜 -->
+                <div class="movieTalk">
+                    <div class="talkTit"><a href="#">微博电影热映榜</a></div>
+                    <div class="movieList clearfix">
+                        <div class="movieTit clearfix">
+                            <div class="movieImg fl">
+                                <a href="#"><img src="img/movieImg.jpg" alt="" /></a>
+                            </div>
+                            <div class="movieInfo fl clearfix">
+                                <span class="fl yuan">1</span>
+                                <h3 class="fl"><a href="#" class="movieName">北京遇上西雅图2之不二情书</a></h3>
+                                <div class="actor">
+                                    <p>导演：薛晓路</p>
+                                    <p>主演：汤唯/吴秀波/还有谁？</p>
+                                </div>
+                                <div class="movieScroe">97.9</div>
+                            </div>
+                        </div>
+                        <div class="movieList_tit clearfix">
+                            <span class="fl">2</span>
+                            <p class="fl movieName_tit"><a href="#">梦想合伙人</a></p>
+                            <p class="movieName_scroe fr">94.6</p>
+                        </div>
+                        <div class="movieList_tit clearfix">
+                            <span class="fl">3</span>
+                            <p class="fl movieName_tit"><a href="#">谁的青春不迷茫</a></p>
+                            <p class="movieName_scroe fr">94.2</p>
+                        </div>
+                    </div>
+                    <div class="more">
+                        <a href="#">查看更多&gt;</a>
+                    </div>
+                </div>
+                <!-- 广告 -->
+                <div class="adBox">
+                    <a href="#"><img src="img/rightAd.jpg" alt="" /></a>
+                </div>
+                <!-- 热门话题 -->
+                <div class="hotTalk">
+                    <div class="talkTit "><a href="#">热门话题</a>
+                        <p class="refuse fr"><a href="#">换一换</a></p>
+                    </div>
+                    <div class="talkList">
+                        <ul>
+                            <li><a href="#">#随手拍美食#</a><i>推荐</i></li>
+                            <li><a href="#">#欢乐颂#</a><em>25.3亿</em></li>
+                            <li><a href="#">#特工皇妃楚乔传#</a><em>7371万</em></li>
+                            <li><a href="#">#魏则西百度推广事件#</a><em>8261万</em></li>
+                            <li><a href="#">#你好五月#</a><em>1亿</em></li>
+                            <li><a href="#">#马来西亚旅行#</a><em>1189万</em></li>
+                            <li><a href="#">#新加坡旅行#</a><em>2018万</em></li>
+                            <li><a href="#">#公路之歌#</a><em>667万</em></li>
+                            <li><a href="#">#游香港拒购物被打#</a><em>19万</em></li>
+                        </ul>
+                    </div>
+                    <div class="more">
+                        <a href="#">查看更多&gt;</a>
+                    </div>
+                </div>
+                <!-- 好友动态 -->
+                <div class="friendTalk">
+                    <div class="talkTit "><a href="#">好友关注动态</a></div>
+                    <div class="friendFollow">
+                        <div class="followList">
+                            <h3>热爱运动的你，快来关注他们</h3>
+                            <div class="followInfo">
+                                <div class="fl friendImg">
+                                    <a href="#"><img src="img/1.jpg" alt="" /></a>
+                                </div>
+                                <div class="fl friendInfo">
+                                    <h4><a href="#">乐视篮球</a><img src="img/vipIcon2.png" alt="" /></h4>
+                                    <p>问题反馈及合作</p>
+                                </div>
+                                <div class="fl followBtn">
+                                    <p>
+                                        关注
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="followList">
+                            <h3>热爱运动的你，快来关注他们</h3>
+                            <div class="followInfo">
+                                <div class="fl friendImg">
+                                    <a href="#"><img src="img/1.jpg" alt="" /></a>
+                                </div>
+                                <div class="fl friendInfo">
+                                    <h4><a href="#">乐视篮球</a><img src="img/vipIcon2.png" alt="" /></h4>
+                                    <p>问题反馈及合作</p>
+                                </div>
+                                <div class="fl followBtn">
+                                    <p>
+                                        关注
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="followList">
+                            <h3>热爱运动的你，快来关注他们</h3>
+                            <div class="followInfo">
+                                <div class="fl friendImg">
+                                    <a href="#"><img src="img/1.jpg" alt="" /></a>
+                                </div>
+                                <div class="fl friendInfo">
+                                    <h4><a href="#">乐视篮球</a><img src="img/vipIcon2.png" alt="" /></h4>
+                                    <p>问题反馈及合作</p>
+                                </div>
+                                <div class="fl followBtn">
+                                    <p>
+                                        关注
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="followList">
+                            <h3>热爱运动的你，快来关注他们</h3>
+                            <div class="followInfo clearfix">
+                                <div class="fl friendImg">
+                                    <a href="#"><img src="img/1.jpg" alt="" /></a>
+                                </div>
+                                <div class="fl friendInfo">
+                                    <h4><a href="#">乐视篮球</a><img src="img/vipIcon2.png" alt="" /></h4>
+                                    <p>问题反馈及合作</p>
+                                </div>
+                                <div class="fl followBtn">
+                                    <p>
+                                        关注
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more">
+                        <a href="#">查看更多&gt;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="test"></div>
+    </div>
+    <!-- 底部 -->
+    <div class="footer">
+        <div class="footerLink">
+            <ul class="footerTit">
+                <li>微博精彩
+                    <div class="footerText">
+                        <p><a href="#">热门微博</a></p>
+                        <p><a href="#">热门话题</a></p>
+                        <p><a href="#">名人堂</a></p>
+                        <p><a href="#">微博会员</a></p>
+                        <p><a href="#">微相册</a></p>
+                        <p><a href="#">微游戏</a></p>
+                        <p><a href="#">微指数</a></p>
+                    </div>
+                </li>
+                <li>手机玩微博
+                    <div class="footerText">
+                        <p>
+                            <a href="#"><img src="img/erwei.jpg" alt="" /></a>
+                        </p>
+                        <a href="#">扫码下载，更多版本戳这里</a>
+                    </div>
+                </li>
+                <li>认证&合作
+                    <div class="footerText">
+                        <p><a href="#">申请认证</a></p>
+                        <p><a href="#">开放平台</a></p>
+                        <p><a href="#">企业微博</a></p>
+                        <p><a href="#">链接网站</a></p>
+                        <p><a href="#">微博标识</a></p>
+                        <p><a href="#">广告服务</a></p>
+                        <p><a href="#">微博商学院</a></p>
+                    </div>
+                </li>
+                <li>微博帮助
+                    <div class="footerText">
+                        <p><a href="#">常见问题</a></p>
+                        <p><a href="#">自助服务</a></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="footerInfo">
+            <div class="weiboInfo">
+                <p>
+                    <a href="#">微博客服</a>
+                    <a href="#">意见反馈</a>
+                    <a href="#">舞弊举报</a>
+                    <a href="#">开放平台</a>
+                    <a href="#">微博招聘</a>
+                    <a href="#">新浪网导航</a>
+                    <a href="#">举报处理大厅</a>
+                </p>
+            </div>
+            <div class="weiboTel">
+                <p>
+                    服务热线：4000 960 960 （个人/企业） 服务时间9:00-21：00 4000 980 980（广告主） 服务时间9:00-18:00（按当地市话标准计算）
+                </p>
+                <p>
+                    京ICP证100780号互联网药品服务许可证互联网医疗保健许可证京网文[2014]2046-296号 京ICP备12002058号 增值电信业务经营许可证B2-20140447
+                </p>
+                <p>
+                    Copyright © 2009-2016 WEIBO 北京微梦创科网络技术有限公司京公网安备11000002000019号
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
