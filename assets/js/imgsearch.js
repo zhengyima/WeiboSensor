@@ -15,8 +15,8 @@ $(".btn-upload").click(function(){
     formData.append('upload', $('#input-file')[0].files[0]);
 
     $.ajax({
-        type:"GET",
-        url:"http://183.174.228.100:1241/imgupload",
+        type:"POST",
+        url:"http://183.174.228.100:1241/imguploadBeta",
         data:formData,
         processData: false,
         contentType: false,
@@ -28,7 +28,7 @@ $(".btn-upload").click(function(){
                 imgurl = res[i]["url"]
                 rowHeader = "<div style='margin:10px 10px;width:210px;float:left;'>"
                 img = "<img src='" + imgurl +"'/ style='width:100%;height:300px;'>" + "<p style='width: 100%; height: 30px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis'>"
-                + res[i]["text"]
+                + res[i]["Text"]
                 + "</p>"
                 userInfo = '<div class="userInfo_sm">\
                 <div class="userImg fl" title="Sakura">\
@@ -41,10 +41,10 @@ $(".btn-upload").click(function(){
                 rowFooter = "</div>"
 
                 $("#result").append(rowHeader+img+userInfo+rowFooter)
-                $("#result").append(rowHeader+img+userInfo+rowFooter)
-                $("#result").append(rowHeader+img+userInfo+rowFooter)
-                $("#result").append(rowHeader+img+userInfo+rowFooter)
-                $("#result").append(rowHeader+img+userInfo+rowFooter)
+                // $("#result").append(rowHeader+img+userInfo+rowFooter)
+                // $("#result").append(rowHeader+img+userInfo+rowFooter)
+                // $("#result").append(rowHeader+img+userInfo+rowFooter)
+                // $("#result").append(rowHeader+img+userInfo+rowFooter)
                 
             }
             $s.text('提交')

@@ -887,6 +887,12 @@
             var element8=document.getElementById('div_地点');
             get_column("地点",element8,data['key'],data['value']);
         });
+        $.get("http://183.174.228.100:1241/getCountry?key="+key, function(data){
+            data=JSON.parse(data);
+            console.log(data);
+            var element10=document.getElementById('worldMapDiv');
+            get_worldmap("世界",element10,data);
+        });
     });
     </script>
 </body>
