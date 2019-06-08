@@ -11,6 +11,55 @@
     <script src="incubator-echarts-master/dist/echarts.min.js"></script>
     <script src="http://echarts.baidu.com/christmas/echarts-wordcloud.min.js"></script>
     <script src="http://data-visual.cn/datav/src/js/echarts/extension/echarts-wordcloud.min.js"></script>
+
+    <link href="./dist/jquery-ui.css" rel="stylesheet">
+    <!-- <link href="./dist/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="./dist/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="./dist/font-awesome.min.css" rel="stylesheet">
+    <link href="./dist/site.css" rel="stylesheet">
+    <script src="./dist/show.js"></script>
+    <!--<script src="./echarts.js"></script>
+    <script src="./js/echarts.js"></script>-->
+    <script src="./dist/echarts.js"></script>
+    <script src="./dist/echarts.min.js"></script>
+    <script src="./dist/echarts-wordcloud.js"></script>
+    <script src="./dist/map/js/china.js"></script>
+    <script src="./dist/map/js/world.js"></script>
+    <script src="./dist/map/js/province/anhui.js"></script>
+    <script src="./dist/map/js/province/aomen.js"></script>
+    <script src="./dist/map/js/province/beijing.js"></script>
+    <script src="./dist/map/js/province/chongqing.js"></script>
+    <script src="./dist/map/js/province/fujian.js"></script>
+    <script src="./dist/map/js/province/gansu.js"></script>
+    <script src="./dist/map/js/province/guangdong.js"></script>
+    <script src="./dist/map/js/province/guangxi.js"></script>
+    <script src="./dist/map/js/province/guizhou.js"></script>
+    <script src="./dist/map/js/province/hainan.js"></script>
+    <script src="./dist/map/js/province/hebei.js"></script>
+    <script src="./dist/map/js/province/heilongjiang.js"></script>
+    <script src="./dist/map/js/province/henan.js"></script>
+    <script src="./dist/map/js/province/hubei.js"></script>
+    <script src="./dist/map/js/province/hunan.js"></script>
+    <script src="./dist/map/js/province/jiangsu.js"></script>
+    <script src="./dist/map/js/province/jiangxi.js"></script>
+    <script src="./dist/map/js/province/jilin.js"></script>
+    <script src="./dist/map/js/province/liaoning.js"></script>
+    <script src="./dist/map/js/province/neimenggu.js"></script>
+    <script src="./dist/map/js/province/ningxia.js"></script>
+    <script src="./dist/map/js/province/qinghai.js"></script>
+    <script src="./dist/map/js/province/shandong.js"></script>
+    <script src="./dist/map/js/province/shanghai.js"></script>
+    <script src="./dist/map/js/province/shanxi.js"></script>
+    <script src="./dist/map/js/province/shanxi1.js"></script>
+    <script src="./dist/map/js/province/sichuan.js"></script>
+    <script src="./dist/map/js/province/taiwan.js"></script>
+    <script src="./dist/map/js/province/tianjin.js"></script>
+    <script src="./dist/map/js/province/xianggang.js"></script>
+    <script src="./dist/map/js/province/xizang.js"></script>
+    <script src="./dist/map/js/province/yunnan.js"></script>
+    <script src="./dist/map/js/province/zhejiang.js"></script>
+    <script src="./dist/map/js/province/xinjiang.js"></script>
+
 </head>
 
 <body bgcolor="#86bddd">
@@ -62,13 +111,44 @@
             </div>
         </div>
     </div>
-    <div class="main clearfix">
-        <div class="weiboBox" style="margin: auto">
-                <div id="wordCloud" style="height:500px; width:500px; margin:auto;"></div>
-        </div>
+
+    <div id="timeline" style="width:85%; height:300px; margin:auto;"></div>
+    <div style="width:85%; margin:auto;">
+        <div id='div_子话题' style='height: 300px; width:23%; float:left; margin:10px 10px;'></div>
+        <div id='div_机构' style='height: 300px; width:23%;float:left; margin:10px 10px;'></div>
+        <div id='div_人物' style='height: 300px; width:23%;float:left; margin:10px 10px;'></div>
+        <div id='div_地点' style='height: 300px; width:23%;float:left; margin:10px 10px;'></div>
+        <div id='div_省份' style='height: 300px; width:23%;float:left; margin:10px 10px;'></div>
+        <div id='div_城市' style='height: 300px; width:23%;float:left; margin:10px 10px;'></div>
+        <div id='div_区县' style='height: 300px; width:23%;float:left; margin:10px 10px;'></div>
+        <div id='div_正负面' style='height: 300px; width:23%;float:left; margin:10px 10px;'></div>
+        <div id='div_正面词' style='height: 300px; width:23%;float:left; margin:10px 10px;'></div>
+        <div id='div_负面词' style='height: 300px; width:23%;float:left; margin:10px 10px;'></div>
+        <div id="mapsDiv" style="width:85%; height:500px; float:left; margin:10px 10px;"></div>
+        <div id="mapsproDiv" style="width:85%; height:500px; float:left; margin:10px 10px;"></div>
+        <div id="worldMapDiv" style="width:85%; height:500px; float:left; margin:10px 10px;"></div>
     </div>
-    
+
+<!-- <div style="clear:both"></div> -->
+<!-- <div id="mapsDiv" class="container" style="height: 500px; -webkit-tap-highlight-color: transparent; user-select: none; background-color: rgba(0, 0, 0, 0);" _echarts_instance_="1559664157322"><div style="position: relative; overflow: hidden; width: 1140px; height: 500px;"><div data-zr-dom-id="bg" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none;"></div><canvas width="1140" height="500" data-zr-dom-id="0" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="1140" height="500" data-zr-dom-id="1" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="1140" height="500" data-zr-dom-id="_zrender_hover_" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><div class="echarts-dataview" style="position: absolute; display: block; overflow: hidden; transition: height 0.8s ease 0s, background-color 1s ease 0s; z-index: 1; left: 0px; top: 0px; width: 1140px; height: 0px; background-color: rgb(240, 255, 255);"></div></div></div> -->
+
+
+<!-- <div style="clear:both"></div> -->
+<!-- <div id="mapsproDiv" class="container" style="height: 500px; -webkit-tap-highlight-color: transparent; user-select: none; background-color: rgba(0, 0, 0, 0);" _echarts_instance_="1559664157322"><div style="position: relative; overflow: hidden; width: 1140px; height: 500px;"><div data-zr-dom-id="bg" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none;"></div><canvas width="1140" height="500" data-zr-dom-id="0" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="1140" height="500" data-zr-dom-id="1" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="1140" height="500" data-zr-dom-id="_zrender_hover_" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><div class="echarts-dataview" style="position: absolute; display: block; overflow: hidden; transition: height 0.8s ease 0s, background-color 1s ease 0s; z-index: 1; left: 0px; top: 0px; width: 1140px; height: 0px; background-color: rgb(240, 255, 255);"></div></div></div> -->
+<script type="text/javascript">
+    var element1=document.getElementById('mapsDiv');
+    var element2=document.getElementById('mapsproDiv');
+    get_chinamap("热门话题及实体",element1,element2,[{'name':'北京','value':100},{'name':'湖北','value':200}], []);
+
+    var element1=document.getElementById('worldMapDiv');
+    get_worldmap("热门话题及实体",element1,[]);
+</script>
+
     <div class="main clearfix">
+        <!-- 词云 -->
+        <div class="weiboBox" style="margin: auto">
+            <div id="wordCloud" style="height:500px; width:500px; margin:auto;"></div>
+        </div>
         <!-- <div class="mainLeft fl">
             <div class="leftNav">
                 <div class="leftNav_t">
@@ -803,69 +883,103 @@
             } ]
         };
         wordCloud.setOption(option);
-        var datas=[
-            {"did":1,"name":"习总书记会见韩国总统朴槿惠(图)","price":36,"img_sm":"p0281.jpg","material":"明虾、番茄酱、白糖、白醋、葱、姜、淀粉"},
-            {"did":2,"name":"中美元首杭州会晤的成果清单公布","price":16.5,"img_sm":"p2679.jpg","material":"切片吐司、紫薯、铁棍山药、糖桂花、炼乳"},
-            {"did":3,"name":"李克强出席东亚峰会传递什么信号？","price":32,"img_sm":"p8489.jpg","material":"三黄鸡、杭椒、干红椒、新鲜小米椒、麻椒、八角、香叶、葱、姜、生抽"},
-            {"did":4,"name":"中国在G20开出了药：就这19个字 能拯救世界","price":36,"img_sm":"p0281.jpg","material":"明虾、番茄酱、白糖、白醋、葱、姜、淀粉"},
-            {"did":5,"name":"昨晚全世界都被杭州美哭了(图)","price":16.5,"img_sm":"p2679.jpg","material":"切片吐司、紫薯、铁棍山药、糖桂花、炼乳"},
-            {"did":6,"name":"许达哲任湖南省代理省长(图/简历)","price":32,"img_sm":"p8489.jpg","material":"三黄鸡、杭椒、干红椒、新鲜小米椒、麻椒、八角、香叶、葱、姜、生抽"},
-            {"did":7,"name":"工信部回应徐玉玉案：个别电信企业罔顾社会责任","price":36,"img_sm":"p0281.jpg","material":"明虾、番茄酱、白糖、白醋、葱、姜、淀粉"},
-            {"did":8,"name":"国产新型森林灭火弹首飞试验成功(图)","price":16.5,"img_sm":"p2679.jpg","material":"切片吐司、紫薯、铁棍山药、糖桂花、炼乳"},
-            {"did":9,"name":"印度“藏人难民”处境艰难 为生计冒充其他民族","price":32,"img_sm":"p8489.jpg","material":"三黄鸡、杭椒、干红椒、新鲜小米椒、麻椒、八角、香叶、葱、姜、生抽"},
-            {"did":10,"name":"韩媒：朝鲜向半岛东部海域发射3枚弹道导弹","price":36,"img_sm":"p0281.jpg","material":"明虾、番茄酱、白糖、白醋、葱、姜、淀粉"},
-            {"did":11,"name":"外媒：杜特尔特宣布菲律宾进入“无法律状态”","price":16.5,"img_sm":"p2679.jpg","material":"切片吐司、紫薯、铁棍山药、糖桂花、炼乳"},
-            {"did":12,"name":"男生摆999个柚子表白师姐遭拒 柚子被抢光(图)","price":32,"img_sm":"p8489.jpg","material":"三黄鸡、杭椒、干红椒、新鲜小米椒、麻椒、八角、香叶、葱、姜、生抽"},
-            {"did":13,"name":"东北这个学校的开学典礼堪比阅兵 还有飞行方阵","price":36,"img_sm":"p0281.jpg","material":"明虾、番茄酱、白糖、白醋、葱、姜、淀粉"},
-            {"did":14,"name":"现场：上百河马群大战百余条鳄鱼群 到底哪方赢了？","price":16.5,"img_sm":"p2679.jpg","material":"切片吐司、紫薯、铁棍山药、糖桂花、炼乳"},
-            {"did":15,"name":"G20 国宴菜单曝光 四道杭帮菜与张裕葡萄酒绝配","price":32,"img_sm":"p8489.jpg","material":"三黄鸡、杭椒、干红椒、新鲜小米椒、麻椒、八角、香叶、葱、姜、生抽"},
-            {"did":16,"name":"舒淇摄影师还原拍婚纱全过程 新娘唯一要求竟是…","price":36,"img_sm":"p0281.jpg","material":"明虾、番茄酱、白糖、白醋、葱、姜、淀粉"},
-            {"did":17,"name":"徐峥带7岁女儿游泳 好爸爸一路背包还拍照","price":16.5,"img_sm":"p2679.jpg","material":"切片吐司、紫薯、铁棍山药、糖桂花、炼乳"},
-            {"did":18,"name":"越南在南海搞大动作，美国急喊停","price":32,"img_sm":"p8489.jpg","material":"三黄鸡、杭椒、干红椒、新鲜小米椒、麻椒、八角、香叶、葱、姜、生抽"},
-            {"did":19,"name":"一图看懂马云如何报KFC一箭之仇","price":36,"img_sm":"p0281.jpg","material":"明虾、番茄酱、白糖、白醋、葱、姜、淀粉"},
-            {"did":20,"name":" 凤凰新闻客户端 积分换礼","price":16.5,"img_sm":"p2679.jpg","material":"切片吐司、紫薯、铁棍山药、糖桂花、炼乳"},
-            {"did":21,"name":"杨洋靠的不只是这张“初恋脸”！","price":32,"img_sm":"p8489.jpg","material":"三黄鸡、杭椒、干红椒、新鲜小米椒、麻椒、八角、香叶、葱、姜、生抽"}
-        ];
-        var options={
-            id:"pages",//显示分页层按钮的id
-            showcount:5,//记录显示列表的数量
-            shownum:4,//记录点击按钮显示个数
-            data:datas,//要处理的数据
-            callback:function(data){
-                var cHtml="";
-                for(var i=0;i<data.length;i++){
-                    // cHtml+="<li>"+ data[i].name+"</li>";//处理数据
-                    cHtml+='<div class="weiboBox">\
-                        <div class="userInfoBox clearfix">\
-                            <div class="userInfo_sm">\
-                                <div class="userImg fl" title="Sakura">\
-                                    <a href="#"><img src="img/userImg2.jpg" alt="" /></a>\
+        $.get("http://183.174.228.100:1241/getContentList?key=%E5%91%A8%E6%9D%B0%E4%BC%A6", function(data){
+            var datas= JSON.parse(data); 
+            var options={
+                id:"pages",//显示分页层按钮的id
+                showcount:5,//记录显示列表的数量
+                shownum:4,//记录点击按钮显示个数
+                data:datas,//要处理的数据
+                callback:function(data){
+                    var cHtml="";
+                    for(var i=0;i<data.length;i++){
+                        // cHtml+="<li>"+ data[i].name+"</li>";//处理数据
+                        var device = '新浪微博';
+                        var zhuan = '转发';
+                        var zan = '赞';
+                        var ping = '评论';
+                        if(data[i].device) device = data[i].device;
+                        if(data[i].zhuan != 0) zhuan = data[i].zhuan;
+                        if(data[i].zan != 0) zan = data[i].zan;
+                        if(data[i].ping != 0) ping = data[i].ping;
+                        cHtml+='<div class="weiboBox">\
+                            <div class="userInfoBox clearfix">\
+                                <div class="userInfo_sm">\
+                                    <div class="userImg fl" title="'+data[i].nick_name+'">\
+                                        <a href="#"><img src="'+data[i].touxiang+'" alt="" /></a>\
+                                    </div>\
+                                    <div class="Info fl" title="'+data[i].nick_name+'">\
+                                        <h3 class="userTit"><a href="#">'+data[i].nick_name+'<img src="img/vipIcon2.png" alt="" /></a> <img src="img/lv_big.png" alt="" /></h3>\
+                                        <p class="time">'+data[i].date+' <em>来自</em> <em><a href="#">'+device+'</a></em></p>\
+                                    </div>\
                                 </div>\
-                                <div class="Info fl" title="Sakura">\
-                                    <h3 class="userTit"><a href="#">Sakura <img src="img/vipIcon2.png" alt="" /></a> <img src="img/lv_big.png" alt="" /></h3>\
-                                    <p class="time"><em>30秒</em>前 <em>来自</em> <em><a href="#">微博weibo.com</a></em></p>\
+                                <div class="weiboText">\
+                                    <p>' + data[i].text +
+                                    '</p>\
                                 </div>\
+                                \
                             </div>\
-                            <div class="weiboText">\
-                                <p>' + data[i].name +
-                                '</p>\
+                            <div class="weiboTool">\
+                                <ul>\
+                                    <li><a href="#" class="collect iconNum">收藏</a></li>\
+                                    <li><a href="#" class="transportNum iconNum">'+zhuan+'</a></li>\
+                                    <li><a href="#" class="talkNum iconNum">'+ping+'</a></li>\
+                                    <li><a href="#" class="goodNum iconNum">'+zan+'</a></li>\
+                                </ul>\
                             </div>\
-                            \
-                        </div>\
-                        <div class="weiboTool">\
-                            <ul>\
-                                <li><a href="#" class="collect iconNum">收藏</a></li>\
-                                <li><a href="#" class="transportNum iconNum">转发</a></li>\
-                                <li><a href="#" class="talkNum iconNum">评论</a></li>\
-                                <li><a href="#" class="goodNum iconNum">赞</a></li>\
-                            </ul>\
-                        </div>\
-                    </div>';
+                        </div>';
+                    }
+                    $("#demoContent").html(cHtml);//将数据增加到页面中
                 }
-                $("#demoContent").html(cHtml);//将数据增加到页面中
-            }
-        };
-        pageObj.init(options);
+            };
+            pageObj.init(options);
+        });
+
+        $.get("http://183.174.228.100:1241/transform?key=习近平", function(data){
+            
+            //$.get("http://183.174.228.100:1241/emotion?key=周杰伦", function(data){
+            //alert(data);
+            // console.log("here1:",data);
+            data=JSON.parse(data);
+            console.log(data);
+            // console.log("here:",data.subtopic.key);
+            var element1=document.getElementById('timeline');
+
+            get_line("华晨宇 媒体报道趋势",element1,data['emotion']['key'],data['emotion']['value']);
+            //get_line("华晨宇 媒体报道趋势",element1,['2019-04-09','2019-05-09'],[[10,5],[20,40],[50,100],[80,145]]);        
+            //get_chinamap("热门话题及实体",element1,element2,data['china'], data['city']);
+            //get_chinamap("热门话题及实体",element1,element2,[{'name':'北京','value':100},{'name':'湖北','value':200}], []);
+            var element2=document.getElementById('div_子话题');
+            get_column("子话题",element2,data['subtopic']['key'],data['subtopic']['value']);
+            var element3=document.getElementById('div_人物');
+            get_column("人物",element3,data['person']['key'],data['person']['value']);
+            var element4=document.getElementById('div_机构');
+            get_column("机构",element4,data['org']['key'],data['org']['value']);
+            var element5=document.getElementById('div_正面词');
+            get_column("正面词",element5,data['posword']['key'],data['posword']['value']);
+            var element6=document.getElementById('div_负面词');
+            get_column("负面词",element6,data['negword']['key'],data['negword']['value']);
+            //get_column("人物",element1,data['subtopic']['key'],data['subtopic']['value']);
+            /*var element1=document.getElementById('div_机构');
+            get_column("机构",element1,[[]]);
+            var element1=document.getElementById('div_人物');
+            get_column("人物",element1,[[]]);
+            var element1=document.getElementById('div_地点');
+            get_column("地点",element1,[[]]);
+            var element1=document.getElementById('div_省份');
+            get_column("省份",element1,[[]]);
+            var element1=document.getElementById('div_城市');
+            get_column("城市",element1,[[]]);
+            var element1=document.getElementById('div_区县');
+            get_column("区县",element1,[[]]);
+            var element1=document.getElementById('div_正负面');
+            get_column("正负面",element1,[[]]);
+            var element1=document.getElementById('div_正面词');
+            get_column("正面词",element1,[[]]);
+            var element1=document.getElementById('div_负面词');
+            get_column("负面词",element1,[[]]);*/
+
+        });
     </script>
 </body>
 </html>
