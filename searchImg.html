@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!--meta name="viewport"    content="width=device-width, initial-scale=1.0">-->
+    <meta name="description" content="">
+    <meta name="author" content="mazy">
+
+    <title>图片搜索</title>
+
+
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/common.css" media="screen" title="no title" charset="utf-8">
+
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <div class="headerBox">
+        <div class="header clearfix">
+            <div class="logo fl">
+                <a href="#"><img src="img/logo.jpg" alt="" /></a>
+            </div>
+            <div class="searchBox fl">           
+                <form id="form-upload" enctype="multipart/form-data" method="post" style="margin-top: 10px !important;margin-left: 200px;">
+                    <input name="upload" style="float: left !important;" type="file" id="input-file" />
+                    <a class="btn btn-primary btn-upload" style="background-color: #FA7D3C; border-color: #FA7D3C;padding: 3px 6px;" type="submit">提交</a>
+                </form>
+            </div>
+            <div class="navBox fl">
+                <ul>
+                    <li class="home "><a href="index.html" class="active">首页</a></li>
+                    <li class="find"><a href="searchImg.html">搜图</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="main clearfix">
+        <div class="row" id="result" style="margin-left: 35px;">
+        </div>
+    </div>
+    <script src="assets/js/imgsearch.js"></script>
+</body>
+
+</html>

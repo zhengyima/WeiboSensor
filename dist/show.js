@@ -390,101 +390,7 @@ myChart.setOption(option, true);
 
 
 
-function get_column1(str,element,data){
-    //alert('????');
-    
-    var myChart = echarts.init(element);
-    var option = {
-    dataset: {
-        source: [
-            ['score', 'amount', 'product'],
-            [89.3, 58212, 'Matcha Latte'],
-            [57.1, 78254, 'Milk Tea'],
-            [74.4, 41032, 'Cheese Cocoa'],
-            [50.1, 12755, 'Cheese Brownie'],
-            [89.7, 20145, 'Matcha Cocoa'],
-            [68.1, 79146, 'Tea'],
-            [19.6, 91852, 'Orange Juice'],
-            [10.6, 101852, 'Lemon Juice'],
-            [32.7, 20112, 'Walnut Brownie']
-        ]
-    },
-    grid:
-        {
-            //borderWidth:1,
-            x: 10,
-            y: 40,
-            x2: 10,
-            y2: 40
-        },
-    xAxis: {name: 'amount',
-        type: 'value',
-            boundaryGap: [0, 0.01],
-            xisTick: { onGap: false },
-            axisLabel:
-               {
-                   textStyle:
-                   {
-                       fontSize: 12,
-                       fontFamily: "'Microsoft YaHei',Arial"
-                   },
-
-               }
-    },
-    yAxis: {type: 'category',
-        show:false,
-         data: null,
-            position: "left",
-            axisTick:
-                {
-                    inside:true
-                },
-            axisLabel:
-                {
-                    formatter: function (value) {
-                    return '{' + value + '| }\n{value|' + value + '}';
-                     },
-                    clickable: true,
-                    textStyle:
-                    {
-                        fontSize: 12,
-                        fontFamily: "'Microsoft YaHei',Arial"
-                    },
-                  
-                }
-
-    },
-    visualMap: {
-        show:false,
-        orient: 'horizontal',
-        left: 'center',
-        min: 10,
-        max: 100,
-        text: ['High Score', 'Low Score'],
-        // Map the score column to color
-        dimension: 0,
-        inRange: {
-            color: ['#D7DA8B', '#E15457']
-        }
-    },
-    series: [
-        {
-            type: 'bar',
-            encode: {
-                // Map the "amount" column to X axis.
-                x: 'amount',
-                // Map the "product" column to Y axis
-                y: 'product'
-            }
-        }
-    ]
-};
-
-
-    myChart.setOption(option);
-    
-}
-function get_chinamap(str,element,element2,dataProv, dataCity){
+function get_chinamap2(str,element,element2,dataProv, dataCity){
     //alert('????');
     
     var myChart = echarts.init(element);
@@ -603,6 +509,118 @@ function get_chinamap(str,element,element2,dataProv, dataCity){
     });
     //myChart.setOption(option);
 }
+
+function get_chinamap(str,element,dataProv){
+    
+    var myChart = echarts.init(element);
+    var option = {
+        title:
+        {
+            text: str,
+            textStyle:
+                {
+                    fontSize: 18,
+                    fontFamily: "'Microsoft YaHei',Arial"
+                }
+        },
+        tooltip: {
+            trigger: 'item'
+        },
+        toolbox: {
+            show: true,
+            orient: 'vertical',
+            feature: {
+                mark: { show: true },
+                dataView: { show: true, readOnly: false }
+            }
+        },
+        series: [
+            {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{b}'
+                },
+                name: 'Province',
+                type: 'map',
+                mapType: 'china',
+                roam: false,
+                mapLocation: {
+                },
+
+                selectedMode: 'single',
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            textStyle:
+                               {
+                                   fontFamily: "'Microsoft YaHei',Arial"
+                               }
+                        },
+                       
+                    },
+                    emphasis: {
+                        label: { show: true },
+                        borderColor: 'red',
+                    }
+                },
+                data: []
+            },
+
+        ],
+        animation: false,
+        dataRange: {
+            x: "left",
+            min: 0,
+            max: 100,
+            value: 100,
+            calculable: true,
+            color: ['#ff3333', 'orange', 'yellow', 'lime', 'aqua'],
+            textStyle: {
+                color: '#fff'
+            }
+        },
+    };
+
+    var maxRange = 1000;
+    if (dataProv.length > 0) {
+        maxRange = 0;
+        // var prov = dataProv[dataProv.length - 1];
+        // prov.selected = true;
+        // get_promap(str,element2,prov.name,dataCity)
+        // maxRange = prov.value;
+        // if (maxRange > 10) {
+        //     maxRange = maxRange *0.8;
+        // }
+
+        var idx = dataProv.length;
+        for (var j = 0; j < dataProv.length; j++) {
+            if (dataProv[j].value>maxRange){
+                maxRange=dataProv[j].value;
+            }
+            
+        }
+
+        option.dataRange.max = maxRange;
+        option.dataRange.value = maxRange;
+        //alert(maxRange);
+
+    }
+
+    option.series[0].data = dataProv;
+    myChart.setOption(option, true);
+
+    // myChart.on("click", function (param) {
+    //     var selectedProvince = param.name;
+    //     get_promap(str,element2,selectedProvince,{})
+    // });
+}
+
+
+
+
+
+
 function get_promap(str,element,selectedProvince,dataCity){
     //alert('????');
     

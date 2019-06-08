@@ -70,8 +70,8 @@
                 <a href="#"><img src="img/logo.jpg" alt="" /></a>
             </div>
             <div class="searchBox fl">
-                <input type="text" class="search" value="" placeholder="大家正在搜：周杰伦">
-                <a href="#" class="searchImg"><img src="img/search.png" alt="" /></a>
+                <input type="text" class="search" value="华晨宇" placeholder="大家正在搜：周杰伦" id="thekey">
+                <a href="#" class="searchImg" id="searchStart"><img src="img/search.png" alt="" /></a>
                 <!-- <div class="search_List">
                     <p class="search_more">
                         <a href="www.baidu.com">查看完整搜索榜》</a>
@@ -92,13 +92,13 @@
             </div>
             <div class="navBox fl">
                 <ul>
-                    <li class="home "><a href="#" class="active">首页</a></li>
-                    <li class="find"><a href="#">发现</a></li>
-                    <li class="game"><a href="#">游戏</a></li>
-                    <li class=user><a href="#">Sakura</a></li>
+                    <li class="home "><a href="index.html" class="active">首页</a></li>
+                    <li class="find"><a href="searchImg.html">搜图</a></li>
+                    <!-- <li class="game"><a href="#">游戏</a></li>
+                    <li class=user><a href="#">Sakura</a></li> -->
                 </ul>
             </div>
-            <div class="settings fl clearfix">
+            <!-- <div class="settings fl clearfix">
                 <div class="set fl">
                     <a href="#"><img src="img/mess_icon.png" alt="" /></a>
                 </div>
@@ -108,7 +108,7 @@
                 <div class="set fl">
                     <a href="#"><img src="img/send_weibo.jpg" alt="" /></a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -120,12 +120,12 @@
         <div id='div_地点' style='height: 300px; width:23%;float:left; margin:10px 10px;'></div>
         <div id='div_省份' style='height: 300px; width:23%;float:left; margin:10px 10px;'></div>
         <div id='div_城市' style='height: 300px; width:23%;float:left; margin:10px 10px;'></div>
-        <div id='div_区县' style='height: 300px; width:23%;float:left; margin:10px 10px;'></div>
+        <!-- <div id='div_区县' style='height: 300px; width:23%;float:left; margin:10px 10px;'></div> -->
         <div id='div_正负面' style='height: 300px; width:23%;float:left; margin:10px 10px;'></div>
         <div id='div_正面词' style='height: 300px; width:23%;float:left; margin:10px 10px;'></div>
         <div id='div_负面词' style='height: 300px; width:23%;float:left; margin:10px 10px;'></div>
         <div id="mapsDiv" style="width:85%; height:500px; float:left; margin:10px 10px;"></div>
-        <div id="mapsproDiv" style="width:85%; height:500px; float:left; margin:10px 10px;"></div>
+        <!-- <div id="mapsproDiv" style="width:85%; height:500px; float:left; margin:10px 10px;"></div> -->
         <div id="worldMapDiv" style="width:85%; height:500px; float:left; margin:10px 10px;"></div>
     </div>
 
@@ -135,14 +135,7 @@
 
 <!-- <div style="clear:both"></div> -->
 <!-- <div id="mapsproDiv" class="container" style="height: 500px; -webkit-tap-highlight-color: transparent; user-select: none; background-color: rgba(0, 0, 0, 0);" _echarts_instance_="1559664157322"><div style="position: relative; overflow: hidden; width: 1140px; height: 500px;"><div data-zr-dom-id="bg" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none;"></div><canvas width="1140" height="500" data-zr-dom-id="0" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="1140" height="500" data-zr-dom-id="1" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="1140" height="500" data-zr-dom-id="_zrender_hover_" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><div class="echarts-dataview" style="position: absolute; display: block; overflow: hidden; transition: height 0.8s ease 0s, background-color 1s ease 0s; z-index: 1; left: 0px; top: 0px; width: 1140px; height: 0px; background-color: rgb(240, 255, 255);"></div></div></div> -->
-<script type="text/javascript">
-    var element1=document.getElementById('mapsDiv');
-    var element2=document.getElementById('mapsproDiv');
-    get_chinamap("热门话题及实体",element1,element2,[{'name':'北京','value':100},{'name':'湖北','value':200}], []);
 
-    var element1=document.getElementById('worldMapDiv');
-    get_worldmap("热门话题及实体",element1,[]);
-</script>
 
     <div class="main clearfix">
         <!-- 词云 -->
@@ -477,16 +470,16 @@
                         <div class="centerNav_list">
                             <ul>
                                 <li><a href="#" class="active">全部</a></li>
-                                <li><a href="#">原创</a></li>
+                                <!-- <li><a href="#">原创</a></li>
                                 <li><a href="#">图片</a></li>
                                 <li><a href="#">视频</a></li>
                                 <li><a href="#">音乐</a></li>
-                                <li><a href="#">文章</a></li>
+                                <li><a href="#">文章</a></li> -->
                             </ul>
                         </div>
                     </div>
                     <div class="nav_search fr clearfix">
-                        <input class="search_sm " type="text" name="name" value="" placeholder="搜索我关注人的微博">
+                        <!-- <input class="search_sm " type="text" name="name" value="" placeholder="搜索我关注人的微博"> -->
                         <span class="pub_list "><a href="#">▼</a></span>
                     </div>
                 </div>
@@ -764,126 +757,46 @@
     </div> -->
     <script src="script/page.js"></script>
     <script type="text/javascript">
-        var wordCloud = echarts.init(document.getElementById('wordCloud'));
-        option = {
-            tooltip: {},
-            series: [ {
-                type: 'wordCloud',
-                gridSize: 2,
-                sizeRange: [12, 50],
-            //  rotationRange: [0, 90],
-                shape: 'star',
-                //width: 600,
-                //height: 400,
-                textStyle: {
-                    normal: {
-                        color: function () {
-                            return 'rgb(' + [
-                                Math.round(Math.random() * 160),
-                                Math.round(Math.random() * 160),
-                                Math.round(Math.random() * 160)
-                            ].join(',') + ')';
+    $(document).ready(function(){
+        $("#searchStart").click();
+    });
+    $("#searchStart").click(function(){
+        var key = $("#thekey").val();
+        $.get("http://183.174.228.100:1241/getKeywords?key="+key, function(my_data){
+            my_data = JSON.parse(my_data);
+            // alert()
+            var wordCloud = echarts.init(document.getElementById('wordCloud'));
+            option = {
+                tooltip: {},
+                series: [ {
+                    type: 'wordCloud',
+                    gridSize: 10,
+                    sizeRange: [12, 50],
+                //  rotationRange: [0, 90],
+                    shape: 'star',
+                    //width: 600,
+                    //height: 400,
+                    textStyle: {
+                        normal: {
+                            color: function () {
+                                return 'rgb(' + [
+                                    Math.round(Math.random() * 160),
+                                    Math.round(Math.random() * 160),
+                                    Math.round(Math.random() * 160)
+                                ].join(',') + ')';
+                            }
+                        },
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowColor: '#333'
                         }
                     },
-                    emphasis: {
-                        shadowBlur: 10,
-                        shadowColor: '#333'
-                    }
-                },
-                data: [
-                    {
-                        name: 'Sam S Club',
-                        value: 10000,
-                        // textStyle: {
-                        //     normal: {
-                        //         color: 'black'
-                        //     },
-                        //     emphasis: {
-                        //         color: 'red'
-                        //     }
-                        // }
-                    },
-                    {
-                        name: 'Macys',
-                        value: 6181
-                    },
-                    {
-                        name: 'Amy Schumer',
-                        value: 4386
-                    },
-                    {
-                        name: 'Jurassic World',
-                        value: 4055
-                    },
-                    {
-                        name: 'Charter Communications',
-                        value: 2467
-                    },
-                    {
-                        name: 'Chick Fil A',
-                        value: 2244
-                    },
-                    {
-                        name: 'Planet Fitness',
-                        value: 1898
-                    },
-                    {
-                        name: 'Pitch Perfect',
-                        value: 1484
-                    },
-                    {
-                        name: 'Express',
-                        value: 1112
-                    },
-                    {
-                        name: 'Home',
-                        value: 965
-                    },
-                    {
-                        name: 'Johnny Depp',
-                        value: 847
-                    },
-                    {
-                        name: 'Lena Dunham',
-                        value: 582
-                    },
-                    {
-                        name: 'Lewis Hamilton',
-                        value: 555
-                    },
-                    {
-                        name: 'KXAN',
-                        value: 550
-                    },
-                    {
-                        name: 'Mary Ellen Mark',
-                        value: 462
-                    },
-                    {
-                        name: 'Farrah Abraham',
-                        value: 366
-                    },
-                    {
-                        name: 'Rita Ora',
-                        value: 360
-                    },
-                    {
-                        name: 'Serena Williams',
-                        value: 282
-                    },
-                    {
-                        name: 'NCAA baseball tournament',
-                        value: 273
-                    },
-                    {
-                        name: 'Point Break',
-                        value: 265
-                    }
-                ]
-            } ]
-        };
-        wordCloud.setOption(option);
-        $.get("http://183.174.228.100:1241/getContentList?key=%E5%91%A8%E6%9D%B0%E4%BC%A6", function(data){
+                    data: my_data['keywords']
+                } ]
+            };
+            wordCloud.setOption(option);
+        });
+        $.get("http://183.174.228.100:1241/getContentList?key="+key, function(data){
             var datas= JSON.parse(data); 
             var options={
                 id:"pages",//显示分页层按钮的id
@@ -935,7 +848,7 @@
             pageObj.init(options);
         });
 
-        $.get("http://183.174.228.100:1241/transform?key=习近平", function(data){
+        $.get("http://183.174.228.100:1241/transform?key="+key, function(data){
             
             //$.get("http://183.174.228.100:1241/emotion?key=周杰伦", function(data){
             //alert(data);
@@ -945,7 +858,7 @@
             // console.log("here:",data.subtopic.key);
             var element1=document.getElementById('timeline');
 
-            get_line("华晨宇 媒体报道趋势",element1,data['emotion']['key'],data['emotion']['value']);
+            get_line(key+" 媒体报道趋势",element1,data['emotion']['key'],data['emotion']['value']);
             //get_line("华晨宇 媒体报道趋势",element1,['2019-04-09','2019-05-09'],[[10,5],[20,40],[50,100],[80,145]]);        
             //get_chinamap("热门话题及实体",element1,element2,data['china'], data['city']);
             //get_chinamap("热门话题及实体",element1,element2,[{'name':'北京','value':100},{'name':'湖北','value':200}], []);
@@ -959,27 +872,22 @@
             get_column("正面词",element5,data['posword']['key'],data['posword']['value']);
             var element6=document.getElementById('div_负面词');
             get_column("负面词",element6,data['negword']['key'],data['negword']['value']);
-            //get_column("人物",element1,data['subtopic']['key'],data['subtopic']['value']);
-            /*var element1=document.getElementById('div_机构');
-            get_column("机构",element1,[[]]);
-            var element1=document.getElementById('div_人物');
-            get_column("人物",element1,[[]]);
-            var element1=document.getElementById('div_地点');
-            get_column("地点",element1,[[]]);
-            var element1=document.getElementById('div_省份');
-            get_column("省份",element1,[[]]);
-            var element1=document.getElementById('div_城市');
-            get_column("城市",element1,[[]]);
-            var element1=document.getElementById('div_区县');
-            get_column("区县",element1,[[]]);
-            var element1=document.getElementById('div_正负面');
-            get_column("正负面",element1,[[]]);
-            var element1=document.getElementById('div_正面词');
-            get_column("正面词",element1,[[]]);
-            var element1=document.getElementById('div_负面词');
-            get_column("负面词",element1,[[]]);*/
-
+            var element7=document.getElementById('div_正负面');
+            get_column("正负面",element7,data['Opinion']['key'],data['Opinion']['value']);
+            var element8=document.getElementById('mapsDiv');
+            get_chinamap("中国地图热度分布",element8,data['chinamap']);
+            var element10=document.getElementById('div_城市');
+            get_column("城市",element10,data['city']['key'],data['city']['value']);
+            // get_column("地点",element1,data);
+            var element9=document.getElementById('div_省份');
+            get_column("省份",element9,data['province']['key'],data['province']['value']);
         });
+        $.get("http://183.174.228.100:1241/getLocation?key="+key, function(data){
+            data=JSON.parse(data);
+            var element8=document.getElementById('div_地点');
+            get_column("地点",element8,data['key'],data['value']);
+        });
+    });
     </script>
 </body>
 </html>

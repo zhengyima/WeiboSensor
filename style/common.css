@@ -22,7 +22,7 @@ a{text-decoration: none;}
 .search:focus{border:1px solid #FA7D3C;background-color:#fff}
 .searchBox .searchImg{position:relative;line-height: 30px;display:inline-block;right:30px;top:4px;}
 .searchBox .searchImg img{width:16px;height:16px;}
-.navBox{margin-top:8px;margin-left: 40px}
+.navBox{margin-top:8px;margin-left: 280px}
 .navBox a{font-size:14px;color:black;line-height: 26px}
 .navBox a:hover{color:#FA7D3C}
 .navBox ul li{float:left;margin-right:30px;width:53px;}
