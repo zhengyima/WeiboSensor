@@ -23,7 +23,7 @@ function get_line(str,element,keys,values){
                 }
     },
     legend: {
-        data: ['All', 'Negative', 'Positive', 'Neutral'],
+        data: ['全部', '负面', '正面', '中性'],
         orient: "horizontal",
         x: "right",
         y: "top",
@@ -104,7 +104,7 @@ function get_line(str,element,keys,values){
     },
     series: [
         {
-            name: 'All',
+            name: '全部',
             type: 'line',
             stack: 'Total',
             symbol: 'none',
@@ -121,7 +121,7 @@ function get_line(str,element,keys,values){
             data: null
         },
         {
-            name: 'Negative',
+            name: '负面',
             type: 'line',
             stack: 'Opinion',
             symbol: 'none',
@@ -138,7 +138,7 @@ function get_line(str,element,keys,values){
             data: null
         },
         {
-            name: 'Positive',
+            name: '正面',
             type: 'line',
             stack: 'Opinion',
             symbol: 'none',
@@ -158,7 +158,7 @@ function get_line(str,element,keys,values){
             data: null
         },
         {
-            name: 'Neutral',
+            name: '中性',
             type: 'line',
             stack: 'Opinion',
             symbol: 'none',
@@ -1102,6 +1102,26 @@ function get_column(str,element,datakey,datavalue){
             y: 40,
             x2: 10,
             y2: 40
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                mark: {
+                    show: true
+                },
+                dataView: {
+                    show: true,
+                    readOnly: true
+                },
+                restore: {
+                    show: true
+                },
+                saveAsImage: {
+                    show: true
+                },
+                magicType : {show: true, type: ['line', 'bar','pie', 'funnel']},
+
+            }
         },
     
     series: [

@@ -1,5 +1,10 @@
 
-$(".btn-upload").click(function(){
+$("#input-file").keypress(function (e) {
+    if (e.which == 13) {
+        $(".btn-upload").click();
+    }
+});
+$(".btn-upload").click(function () {
     var $s = $(this);
 
     file = $('.input-file').val();
@@ -15,40 +20,40 @@ $(".btn-upload").click(function(){
     formData.append('upload', $('#input-file')[0].files[0]);
 
     $.ajax({
-        type:"POST",
-        url:"http://183.174.228.100:1241/imguploadBeta",
-        data:formData,
+        type: "POST",
+        url: "http://183.174.228.100:1241/imguploadBeta",
+        data: formData,
         processData: false,
         contentType: false,
-        success:function(data){
+        success: function (data) {
             $("#result").html("")
-            console.log(data)
+            // console.log(data)
             var res = JSON.parse(data)
-            for(var i = 0; i < res.length; i++){
+            for (var i = 0; i < res.length; i++) {
                 imgurl = res[i]["url"]
-                if(res[i]["nickName"].length > 6){
-                    res[i]["nickName"] = res[i]["nickName"].substring(0,6) + ".."
+                if (res[i]["nickName"].length > 6) {
+                    res[i]["nickName"] = res[i]["nickName"].substring(0, 6) + ".."
                 }
                 rowHeader = "<div style='margin:10px 10px;width:210px;float:left;'>"
-                img = "<img src='" + imgurl +"'/ style='width:100%;height:300px;'>" + "<p style='width: 100%; height: 30px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis'>"
-                + res[i]["Text"]
-                + "</p>"
+                img = "<img src='" + imgurl + "'/ style='width:100%;height:300px;'>" + "<p style='width: 100%; height: 30px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis'>"
+                    + res[i]["Text"]
+                    + "</p>"
                 userInfo = '<div class="userInfo_sm">\
                 <div class="userImg fl" title="Sakura">\
-                    <a href="#"><img src="'+res[i]["avatarUrl"]+'" alt=""  height="50" width="50"/></a>\
+                    <a href="#"><img src="'+ res[i]["avatarUrl"] + '" alt=""  height="50" width="50"/></a>\
                 </div>\
                 <div class="Info fl" title="Sakura">\
-                    <h3 class="userTit"><a href="'+res[i]["nickNameUrl"]+'">'+res[i]["nickName"]+' <img src="img/vipIcon2.png" alt="" /></a> <img src="img/lv_big.png" alt="" /></h3>\
+                    <h3 class="userTit"><a href="'+ res[i]["nickNameUrl"] + '">' + res[i]["nickName"] + ' <img src="img/vipIcon2.png" alt="" /></a> <img src="img/lv_big.png" alt="" /></h3>\
                 </div>\
             </div>'
                 rowFooter = "</div>"
 
-                $("#result").append(rowHeader+img+userInfo+rowFooter)
+                $("#result").append(rowHeader + img + userInfo + rowFooter)
                 // $("#result").append(rowHeader+img+userInfo+rowFooter)
                 // $("#result").append(rowHeader+img+userInfo+rowFooter)
                 // $("#result").append(rowHeader+img+userInfo+rowFooter)
                 // $("#result").append(rowHeader+img+userInfo+rowFooter)
-                
+
             }
             $s.text('提交')
         }

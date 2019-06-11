@@ -28,7 +28,9 @@ a{text-decoration: none;}
 .navBox ul li{float:left;margin-right:30px;width:53px;}
 .navBox .active{color:#FA7D3C}
 .home{background:url(../img/home_icon.jpg) left center no-repeat;text-indent: 25px}
+.homeblack{background:url(../img/houseblack.png) left center no-repeat;text-indent: 35px}
 .find{background:url(../img/find_icon.jpg) left center no-repeat;text-indent: 25px}
+.findred{background:url(../img/tured.png) left center no-repeat;text-indent: 35px}
 .game{background:url(../img/game_icon.jpg) left center no-repeat;text-indent: 25px}
 .user{background:url(../img/user_icon.jpg) left center no-repeat;text-indent: 25px}
 .header em{font-style: normal}
