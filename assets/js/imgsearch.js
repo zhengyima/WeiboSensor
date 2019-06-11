@@ -26,6 +26,9 @@ $(".btn-upload").click(function(){
             var res = JSON.parse(data)
             for(var i = 0; i < res.length; i++){
                 imgurl = res[i]["url"]
+                if(res[i]["nickName"].length > 6){
+                    res[i]["nickName"] = res[i]["nickName"].substring(0,6) + ".."
+                }
                 rowHeader = "<div style='margin:10px 10px;width:210px;float:left;'>"
                 img = "<img src='" + imgurl +"'/ style='width:100%;height:300px;'>" + "<p style='width: 100%; height: 30px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis'>"
                 + res[i]["Text"]

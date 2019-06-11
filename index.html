@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>新浪微博</title>
     <link rel="stylesheet" href="style/common.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="style/page.css"/>
+    <link rel="stylesheet" href="style/page.css" />
     <script src="script/jquery-1.12.3.min.js" charset="utf-8"></script>
     <script src="script/main.js" charset="utf-8"></script>
     <script src="incubator-echarts-master/dist/echarts.min.js"></script>
@@ -70,7 +70,7 @@
                 <a href="#"><img src="img/logo.jpg" alt="" /></a>
             </div>
             <div class="searchBox fl">
-                <input type="text" class="search" value="华晨宇" placeholder="大家正在搜：周杰伦" id="thekey">
+                <input type="text" class="search" value="中国人民大学" placeholder="大家正在搜：周杰伦" id="thekey">
                 <a href="#" class="searchImg" id="searchStart"><img src="img/search.png" alt="" /></a>
                 <!-- <div class="search_List">
                     <p class="search_more">
@@ -93,7 +93,7 @@
             <div class="navBox fl">
                 <ul>
                     <li class="home "><a href="index.html" class="active">首页</a></li>
-                    <li class="find"><a href="searchImg.html">搜图</a></li>
+                    <li class="find"><a href="searchImg.html">识图</a></li>
                     <!-- <li class="game"><a href="#">游戏</a></li>
                     <li class=user><a href="#">Sakura</a></li> -->
                 </ul>
@@ -111,6 +111,44 @@
             </div> -->
         </div>
     </div>
+    <div class="row" id="basicInfoDiv" style="width:50%; margin:auto;height:70px;">
+        <div class=" col-md-8 text-right" style="text-align: right;">
+            <div style="text-align:right">
+                <div style="float:left;">
+                    <div style="color:black;font-size:2em;text-align:center" id="num_match">0</div>
+                    <div style="color:#333333;font-size:1em;text-align:center">报道总数</div>
+                </div>
+                <div style="float:left;width:30px">&nbsp;</div>
+                <div style="float:left">
+                    <div style="color:blue;font-size:2em;text-align:center" id="positive">0</div>
+                    <div style="color:#333333;font-size:1em;text-align:center">正面报道</div>
+                </div>
+                <div style="float:left;width:30px">&nbsp;</div>
+                <div style="float:left">
+                    <div style="color:orange;font-size:2em;text-align:center" id="neutral">0</div>
+                    <div style="color:#333333;font-size:1em;text-align:center">中性报道</div>
+                </div>
+                <div style="float:left;width:30px">&nbsp;</div>
+                <div style="float:left">
+                    <div style="color:red;font-size:2em;text-align:center" id="negative">0</div>
+                    <div style="color:#333333;font-size:1em;text-align:center">负面报道</div>
+                </div>
+                <div style="float:left;width:30px">&nbsp;</div>
+                <div style="float:left">
+                    <div style="color:orange;font-size:2em;text-align:center" id="score">0</div>
+                    <div style="color:#333333;font-size:1em;text-align:center">倾向性评分</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-right" style="text-align: right;">
+            <div class="lazyDiv" style="float:right"><img class="homeLazyImg" src="http://183.174.228.2:1241/pic/pic.aspx?c=1&q=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E5%A4%A7%E5%AD%A6&market=zh-CN"
+                    style="height: 48px; width: 48px; display: inline;" data-original="http://183.174.228.2:1241/pic/pic.aspx?c=1&amp;q=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E5%A4%A7%E5%AD%A6&amp;market=zh-CN"
+                    title="中国人民大学" alt="中国人民大学" src="./search2_files/pic.aspx" data-bd-imgshare-binded="1"></div>
+            <div style="font-size:2em;float:right" id="query_col">中国人民大学</div>
+        </div>
+    </div>
+
 
     <div id="timeline" style="width:85%; height:300px; margin:auto;"></div>
     <div style="width:85%; margin:auto;">
@@ -129,12 +167,12 @@
         <div id="worldMapDiv" style="width:85%; height:500px; float:left; margin:10px 10px;"></div>
     </div>
 
-<!-- <div style="clear:both"></div> -->
-<!-- <div id="mapsDiv" class="container" style="height: 500px; -webkit-tap-highlight-color: transparent; user-select: none; background-color: rgba(0, 0, 0, 0);" _echarts_instance_="1559664157322"><div style="position: relative; overflow: hidden; width: 1140px; height: 500px;"><div data-zr-dom-id="bg" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none;"></div><canvas width="1140" height="500" data-zr-dom-id="0" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="1140" height="500" data-zr-dom-id="1" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="1140" height="500" data-zr-dom-id="_zrender_hover_" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><div class="echarts-dataview" style="position: absolute; display: block; overflow: hidden; transition: height 0.8s ease 0s, background-color 1s ease 0s; z-index: 1; left: 0px; top: 0px; width: 1140px; height: 0px; background-color: rgb(240, 255, 255);"></div></div></div> -->
+    <!-- <div style="clear:both"></div> -->
+    <!-- <div id="mapsDiv" class="container" style="height: 500px; -webkit-tap-highlight-color: transparent; user-select: none; background-color: rgba(0, 0, 0, 0);" _echarts_instance_="1559664157322"><div style="position: relative; overflow: hidden; width: 1140px; height: 500px;"><div data-zr-dom-id="bg" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none;"></div><canvas width="1140" height="500" data-zr-dom-id="0" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="1140" height="500" data-zr-dom-id="1" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="1140" height="500" data-zr-dom-id="_zrender_hover_" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><div class="echarts-dataview" style="position: absolute; display: block; overflow: hidden; transition: height 0.8s ease 0s, background-color 1s ease 0s; z-index: 1; left: 0px; top: 0px; width: 1140px; height: 0px; background-color: rgb(240, 255, 255);"></div></div></div> -->
 
 
-<!-- <div style="clear:both"></div> -->
-<!-- <div id="mapsproDiv" class="container" style="height: 500px; -webkit-tap-highlight-color: transparent; user-select: none; background-color: rgba(0, 0, 0, 0);" _echarts_instance_="1559664157322"><div style="position: relative; overflow: hidden; width: 1140px; height: 500px;"><div data-zr-dom-id="bg" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none;"></div><canvas width="1140" height="500" data-zr-dom-id="0" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="1140" height="500" data-zr-dom-id="1" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="1140" height="500" data-zr-dom-id="_zrender_hover_" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><div class="echarts-dataview" style="position: absolute; display: block; overflow: hidden; transition: height 0.8s ease 0s, background-color 1s ease 0s; z-index: 1; left: 0px; top: 0px; width: 1140px; height: 0px; background-color: rgb(240, 255, 255);"></div></div></div> -->
+    <!-- <div style="clear:both"></div> -->
+    <!-- <div id="mapsproDiv" class="container" style="height: 500px; -webkit-tap-highlight-color: transparent; user-select: none; background-color: rgba(0, 0, 0, 0);" _echarts_instance_="1559664157322"><div style="position: relative; overflow: hidden; width: 1140px; height: 500px;"><div data-zr-dom-id="bg" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none;"></div><canvas width="1140" height="500" data-zr-dom-id="0" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="1140" height="500" data-zr-dom-id="1" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="1140" height="500" data-zr-dom-id="_zrender_hover_" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><div class="echarts-dataview" style="position: absolute; display: block; overflow: hidden; transition: height 0.8s ease 0s, background-color 1s ease 0s; z-index: 1; left: 0px; top: 0px; width: 1140px; height: 0px; background-color: rgb(240, 255, 255);"></div></div></div> -->
 
 
     <div class="main clearfix">
@@ -533,8 +571,8 @@
             </div>
             <!-- 右侧 -->
             <!-- <div class="mainRight_r fl"> -->
-                <!-- 用户信息 -->
-                <!-- <div class="userBox">
+            <!-- 用户信息 -->
+            <!-- <div class="userBox">
                     <div class="userbg"></div>
                     <div class="userImgBox">
                         <a href="#"><img src="img/userImg.jpg" alt="Sakura" title="sakura" /></a>
@@ -548,8 +586,8 @@
                         </div>
                     </div>
                 </div> -->
-                <!-- 电影热映榜 -->
-                <!-- <div class="movieTalk">
+            <!-- 电影热映榜 -->
+            <!-- <div class="movieTalk">
                     <div class="talkTit"><a href="#">微博电影热映榜</a></div>
                     <div class="movieList clearfix">
                         <div class="movieTit clearfix">
@@ -581,12 +619,12 @@
                         <a href="#">查看更多&gt;</a>
                     </div>
                 </div> -->
-                <!-- 广告 -->
-                <!-- <div class="adBox">
+            <!-- 广告 -->
+            <!-- <div class="adBox">
                     <a href="#"><img src="img/rightAd.jpg" alt="" /></a>
                 </div> -->
-                <!-- 热门话题 -->
-                <!-- <div class="hotTalk">
+            <!-- 热门话题 -->
+            <!-- <div class="hotTalk">
                     <div class="talkTit "><a href="#">热门话题</a>
                         <p class="refuse fr"><a href="#">换一换</a></p>
                     </div>
@@ -607,8 +645,8 @@
                         <a href="#">查看更多&gt;</a>
                     </div>
                 </div> -->
-                <!-- 好友动态 -->
-                <!-- <div class="friendTalk">
+            <!-- 好友动态 -->
+            <!-- <div class="friendTalk">
                     <div class="talkTit "><a href="#">好友关注动态</a></div>
                     <div class="friendFollow">
                         <div class="followList">
@@ -757,143 +795,155 @@
     </div> -->
     <script src="script/page.js"></script>
     <script type="text/javascript">
-    $(document).ready(function(){
-        $("#searchStart").click();
-    });
-    $("#searchStart").click(function(){
-        var key = $("#thekey").val();
-        $.get("http://183.174.228.100:1241/getKeywords?key="+key, function(my_data){
-            my_data = JSON.parse(my_data);
-            // alert()
-            var wordCloud = echarts.init(document.getElementById('wordCloud'));
-            option = {
-                tooltip: {},
-                series: [ {
-                    type: 'wordCloud',
-                    gridSize: 10,
-                    sizeRange: [12, 50],
-                //  rotationRange: [0, 90],
-                    shape: 'star',
-                    //width: 600,
-                    //height: 400,
-                    textStyle: {
-                        normal: {
-                            color: function () {
-                                return 'rgb(' + [
-                                    Math.round(Math.random() * 160),
-                                    Math.round(Math.random() * 160),
-                                    Math.round(Math.random() * 160)
-                                ].join(',') + ')';
+        $(document).ready(function () {
+            $("#searchStart").click();
+        });
+        $("#searchStart").click(function () {
+            var key = $("#thekey").val();
+            $.get("http://183.174.228.100:1241/getOpinionCount?key=" + key,function(my_data){
+                my_data = JSON.parse(my_data)
+                $("#num_match").html(my_data["num_match"])
+                $("#positive").html(my_data["positive"])
+                $("#neutral").html(my_data["neutral"])
+                $("#negative").html(my_data["negative"])
+                $("#score").html(my_data["score"])
+                $(".homeLazyImg").attr("src","http://183.174.228.2:1241/pic/pic.aspx?c=1&q="+key+"&market=zh-CN")
+                $("#query_col").html(key)
+
+            })
+            $.get("http://183.174.228.100:1241/getKeywords?key=" + key, function (my_data) {
+                my_data = JSON.parse(my_data);
+                // alert()
+                var wordCloud = echarts.init(document.getElementById('wordCloud'));
+                option = {
+                    tooltip: {},
+                    series: [{
+                        type: 'wordCloud',
+                        gridSize: 10,
+                        sizeRange: [12, 50],
+                        //  rotationRange: [0, 90],
+                        shape: 'star',
+                        //width: 600,
+                        //height: 400,
+                        textStyle: {
+                            normal: {
+                                color: function () {
+                                    return 'rgb(' + [
+                                        Math.round(Math.random() * 160),
+                                        Math.round(Math.random() * 160),
+                                        Math.round(Math.random() * 160)
+                                    ].join(',') + ')';
+                                }
+                            },
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowColor: '#333'
                             }
                         },
-                        emphasis: {
-                            shadowBlur: 10,
-                            shadowColor: '#333'
-                        }
-                    },
-                    data: my_data['keywords']
-                } ]
-            };
-            wordCloud.setOption(option);
-        });
-        $.get("http://183.174.228.100:1241/getContentList?key="+key, function(data){
-            var datas= JSON.parse(data); 
-            var options={
-                id:"pages",//显示分页层按钮的id
-                showcount:5,//记录显示列表的数量
-                shownum:4,//记录点击按钮显示个数
-                data:datas,//要处理的数据
-                callback:function(data){
-                    var cHtml="";
-                    for(var i=0;i<data.length;i++){
-                        // cHtml+="<li>"+ data[i].name+"</li>";//处理数据
-                        var device = '新浪微博';
-                        var zhuan = '转发';
-                        var zan = '赞';
-                        var ping = '评论';
-                        if(data[i].device) device = data[i].device;
-                        if(data[i].zhuan != 0) zhuan = data[i].zhuan;
-                        if(data[i].zan != 0) zan = data[i].zan;
-                        if(data[i].ping != 0) ping = data[i].ping;
-                        cHtml+='<div class="weiboBox">\
+                        data: my_data['keywords']
+                    }]
+                };
+                wordCloud.setOption(option);
+            });
+            $.get("http://183.174.228.100:1241/getContentList?key=" + key, function (data) {
+                var datas = JSON.parse(data);
+                var options = {
+                    id: "pages",//显示分页层按钮的id
+                    showcount: 5,//记录显示列表的数量
+                    shownum: 4,//记录点击按钮显示个数
+                    data: datas,//要处理的数据
+                    callback: function (data) {
+                        var cHtml = "";
+                        for (var i = 0; i < data.length; i++) {
+                            // cHtml+="<li>"+ data[i].name+"</li>";//处理数据
+                            var device = '新浪微博';
+                            var zhuan = '转发';
+                            var zan = '赞';
+                            var ping = '评论';
+                            if (data[i].device) device = data[i].device;
+                            if (data[i].zhuan != 0) zhuan = data[i].zhuan;
+                            if (data[i].zan != 0) zan = data[i].zan;
+                            if (data[i].ping != 0) ping = data[i].ping;
+                            cHtml += '<div class="weiboBox">\
                             <div class="userInfoBox clearfix">\
                                 <div class="userInfo_sm">\
-                                    <div class="userImg fl" title="'+data[i].nick_name+'">\
-                                        <a href="#"><img src="'+data[i].touxiang+'" alt="" /></a>\
+                                    <div class="userImg fl" title="'+ data[i].nick_name + '">\
+                                        <a href="#"><img src="'+ data[i].touxiang + '" alt="" /></a>\
                                     </div>\
-                                    <div class="Info fl" title="'+data[i].nick_name+'">\
-                                        <h3 class="userTit"><a href="#">'+data[i].nick_name+'<img src="img/vipIcon2.png" alt="" /></a> <img src="img/lv_big.png" alt="" /></h3>\
-                                        <p class="time">'+data[i].date+' <em>来自</em> <em><a href="#">'+device+'</a></em></p>\
+                                    <div class="Info fl" title="'+ data[i].nick_name + '">\
+                                        <h3 class="userTit"><a href="#">'+ data[i].nick_name + '<img src="img/vipIcon2.png" alt="" /></a> <img src="img/lv_big.png" alt="" /></h3>\
+                                        <p class="time">'+ data[i].date + ' <em>来自</em> <em><a href="#">' + device + '</a></em></p>\
                                     </div>\
                                 </div>\
                                 <div class="weiboText">\
                                     <p>' + data[i].text +
-                                    '</p>\
+                                '</p>\
                                 </div>\
                                 \
                             </div>\
                             <div class="weiboTool">\
                                 <ul>\
                                     <li><a href="#" class="collect iconNum">收藏</a></li>\
-                                    <li><a href="#" class="transportNum iconNum">'+zhuan+'</a></li>\
-                                    <li><a href="#" class="talkNum iconNum">'+ping+'</a></li>\
-                                    <li><a href="#" class="goodNum iconNum">'+zan+'</a></li>\
+                                    <li><a href="#" class="transportNum iconNum">'+ zhuan + '</a></li>\
+                                    <li><a href="#" class="talkNum iconNum">'+ ping + '</a></li>\
+                                    <li><a href="#" class="goodNum iconNum">'+ zan + '</a></li>\
                                 </ul>\
                             </div>\
                         </div>';
+                        }
+                        $("#demoContent").html(cHtml);//将数据增加到页面中
                     }
-                    $("#demoContent").html(cHtml);//将数据增加到页面中
-                }
-            };
-            pageObj.init(options);
-        });
+                };
+                pageObj.init(options);
+            });
 
-        $.get("http://183.174.228.100:1241/transform?key="+key, function(data){
-            
-            //$.get("http://183.174.228.100:1241/emotion?key=周杰伦", function(data){
-            //alert(data);
-            // console.log("here1:",data);
-            data=JSON.parse(data);
-            console.log(data);
-            // console.log("here:",data.subtopic.key);
-            var element1=document.getElementById('timeline');
+            $.get("http://183.174.228.100:1241/transform?key=" + key, function (data) {
 
-            get_line(key+" 微博趋势",element1,data['emotion']['key'],data['emotion']['value']);
-            //get_line("华晨宇 媒体报道趋势",element1,['2019-04-09','2019-05-09'],[[10,5],[20,40],[50,100],[80,145]]);        
-            //get_chinamap("热门话题及实体",element1,element2,data['china'], data['city']);
-            //get_chinamap("热门话题及实体",element1,element2,[{'name':'北京','value':100},{'name':'湖北','value':200}], []);
-            var element2=document.getElementById('div_子话题');
-            get_column("子话题",element2,data['subtopic']['key'],data['subtopic']['value']);
-            var element3=document.getElementById('div_人物');
-            get_column("人物",element3,data['person']['key'],data['person']['value']);
-            var element4=document.getElementById('div_机构');
-            get_column("机构",element4,data['org']['key'],data['org']['value']);
-            var element5=document.getElementById('div_正面词');
-            get_column("正面词",element5,data['posword']['key'],data['posword']['value']);
-            var element6=document.getElementById('div_负面词');
-            get_column("负面词",element6,data['negword']['key'],data['negword']['value']);
-            var element7=document.getElementById('div_正负面');
-            get_column("正负面",element7,data['Opinion']['key'],data['Opinion']['value']);
-            var element8=document.getElementById('mapsDiv');
-            get_chinamap("中国地图热度分布",element8,data['chinamap']);
-            var element10=document.getElementById('div_城市');
-            get_column("城市",element10,data['city']['key'],data['city']['value']);
-            // get_column("地点",element1,data);
-            var element9=document.getElementById('div_省份');
-            get_column("省份",element9,data['province']['key'],data['province']['value']);
+                //$.get("http://183.174.228.100:1241/emotion?key=周杰伦", function(data){
+                //alert(data);
+                // console.log("here1:",data);
+                data = JSON.parse(data);
+                console.log(data);
+                // console.log("here:",data.subtopic.key);
+                var element1 = document.getElementById('timeline');
+
+                get_line(key + " 微博趋势", element1, data['emotion']['key'], data['emotion']['value']);
+                //get_line("华晨宇 媒体报道趋势",element1,['2019-04-09','2019-05-09'],[[10,5],[20,40],[50,100],[80,145]]);        
+                //get_chinamap("热门话题及实体",element1,element2,data['china'], data['city']);
+                //get_chinamap("热门话题及实体",element1,element2,[{'name':'北京','value':100},{'name':'湖北','value':200}], []);
+                var element2 = document.getElementById('div_子话题');
+                get_column("子话题", element2, data['subtopic']['key'], data['subtopic']['value']);
+                var element3 = document.getElementById('div_人物');
+                get_column("人物", element3, data['person']['key'], data['person']['value']);
+                var element4 = document.getElementById('div_机构');
+                get_column("机构", element4, data['org']['key'], data['org']['value']);
+                var element5 = document.getElementById('div_正面词');
+                get_column("正面词", element5, data['posword']['key'], data['posword']['value']);
+                var element6 = document.getElementById('div_负面词');
+                get_column("负面词", element6, data['negword']['key'], data['negword']['value']);
+                var element7 = document.getElementById('div_正负面');
+                get_column("正负面", element7, data['Opinion']['key'], data['Opinion']['value']);
+                var element8 = document.getElementById('mapsDiv');
+                get_chinamap("中国地图热度分布", element8, data['chinamap']);
+                var element10 = document.getElementById('div_城市');
+                get_column("城市", element10, data['city']['key'], data['city']['value']);
+                // get_column("地点",element1,data);
+                var element9 = document.getElementById('div_省份');
+                get_column("省份", element9, data['province']['key'], data['province']['value']);
+            });
+            $.get("http://183.174.228.100:1241/getLocation?key=" + key, function (data) {
+                data = JSON.parse(data);
+                var element8 = document.getElementById('div_地点');
+                get_column("地点", element8, data['key'], data['value']);
+            });
+            $.get("http://183.174.228.100:1241/getCountry?key=" + key, function (data) {
+                data = JSON.parse(data);
+                console.log(data);
+                var element10 = document.getElementById('worldMapDiv');
+                get_worldmap("世界", element10, data);
+            });
         });
-        $.get("http://183.174.228.100:1241/getLocation?key="+key, function(data){
-            data=JSON.parse(data);
-            var element8=document.getElementById('div_地点');
-            get_column("地点",element8,data['key'],data['value']);
-        });
-        $.get("http://183.174.228.100:1241/getCountry?key="+key, function(data){
-            data=JSON.parse(data);
-            console.log(data);
-            var element10=document.getElementById('worldMapDiv');
-            get_worldmap("世界",element10,data);
-        });
-    });
     </script>
 </body>
+
 </html>
