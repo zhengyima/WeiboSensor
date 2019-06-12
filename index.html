@@ -876,7 +876,7 @@
                                         <a href="#"><img src="'+ data[i].touxiang + '" alt="" /></a>\
                                     </div>\
                                     <div class="Info fl" title="'+ data[i].nick_name + '">\
-                                        <h3 class="userTit"><a href="#">'+ data[i].nick_name + '<img src="img/vipIcon2.png" alt="" /></a> <img src="img/lv_big.png" alt="" /></h3>\
+                                        <h3 class="userTit"><a href="#">'+ data[i].nick_name + '</a> </h3>\
                                         <p class="time">'+ data[i].date + ' <em>来自</em> <em><a href="#">' + device + '</a></em></p>\
                                     </div>\
                                 </div>\
@@ -894,7 +894,34 @@
                                     <li><a href="#" class="goodNum iconNum">'+ zan + '</a></li>\
                                 </ul>\
                             </div>\
-                        </div>';
+                        </div>'
+
+                        //     cHtml += '<div class="weiboBox">\
+                        //     <div class="userInfoBox clearfix">\
+                        //         <div class="userInfo_sm">\
+                        //             <div class="userImg fl" title="'+ data[i].nick_name + '">\
+                        //                 <a href="#"><img src="'+ data[i].touxiang + '" alt="" /></a>\
+                        //             </div>\
+                        //             <div class="Info fl" title="'+ data[i].nick_name + '">\
+                        //                 <h3 class="userTit"><a href="#">'+ data[i].nick_name + '<img src="img/vipIcon2.png" alt="" /></a> <img src="img/lv_big.png" alt="" /></h3>\
+                        //                 <p class="time">'+ data[i].date + ' <em>来自</em> <em><a href="#">' + device + '</a></em></p>\
+                        //             </div>\
+                        //         </div>\
+                        //         <div class="weiboText">\
+                        //             <p>' + data[i].text +
+                        //         '</p>\
+                        //         </div>\
+                        //         \
+                        //     </div>\
+                        //     <div class="weiboTool">\
+                        //         <ul>\
+                        //             <li><a href="#" class="collect iconNum">收藏</a></li>\
+                        //             <li><a href="#" class="transportNum iconNum">'+ zhuan + '</a></li>\
+                        //             <li><a href="#" class="talkNum iconNum">'+ ping + '</a></li>\
+                        //             <li><a href="#" class="goodNum iconNum">'+ zan + '</a></li>\
+                        //         </ul>\
+                        //     </div>\
+                        // </div>'
                         }
                         $("#demoContent").html(cHtml);//将数据增加到页面中
                     }
