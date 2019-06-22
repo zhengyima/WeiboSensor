@@ -18,6 +18,7 @@ $(".btn-upload").click(function () {
 
     var formData = new FormData();
     formData.append('upload', $('#input-file')[0].files[0]);
+    formData.append('select',$("#input-select").val())
 
     $.ajax({
         type: "POST",
@@ -43,7 +44,7 @@ $(".btn-upload").click(function () {
                     <a href="#"><img src="'+ res[i]["avatarUrl"] + '" alt=""  height="50" width="50"/></a>\
                 </div>\
                 <div class="Info fl" title="Sakura">\
-                    <h3 class="userTit"><a href="'+ res[i]["nickNameUrl"] + '">' + res[i]["nickName"] + ' <img src="img/vipIcon2.png" alt="" /></a> <img src="img/lv_big.png" alt="" /></h3>\
+                    <h3 class="userTit"><a href="'+ res[i]["nickNameUrl"] + '">' + res[i]["nickName"] + ' </a> </h3>\
                 </div>\
             </div>'
                 rowFooter = "</div>"
